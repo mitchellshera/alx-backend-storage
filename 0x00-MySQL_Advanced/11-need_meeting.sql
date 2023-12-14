@@ -1,11 +1,9 @@
 -- Create or replace the view
 CREATE VIEW need_meeting AS
 SELECT
-    s.name
+    name
 FROM
-    students s
-LEFT JOIN
-    meetings m ON s.id = m.student_id
+    students
 WHERE
-    s.score < 80
-    AND (m.last_meeting_date IS NULL OR m.last_meeting_date < NOW() - INTERVAL 1 MONTH);
+    score < 80
+    AND (last_meeting IS NULL OR last_meeting < DATE(CURDATE() - INTERVAL 1 MONTH));
