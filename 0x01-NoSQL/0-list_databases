@@ -1,0 +1,3 @@
+// mongodb_list_databases
+
+show dbs
