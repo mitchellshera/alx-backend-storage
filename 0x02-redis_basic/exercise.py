@@ -2,10 +2,10 @@
 '''module for exercise.py '''
 
 
-
 import redis
 import uuid
 from typing import Union
+
 
 class Cache:
     """
@@ -14,7 +14,8 @@ class Cache:
 
     def __init__(self):
         """
-        Initialize the Cache instance with a Redis client and flush the database.
+        Initialize the Cache instance with
+        a Redis client and flush the database.
         """
         self._redis = redis.Redis()
         self._redis.flushdb()
